@@ -1,0 +1,24 @@
+<div class="castCard">
+  <img 
+    class="castImage"
+    [src]="member.person.image.original"
+    alt="{{ member.person.name }}">
+
+  <div class="castInfo">
+    <h3 class="actor-name">
+      {{ member.person.name }}
+    </h3>
+
+    <div class="castDetails">
+      <p><strong>Género:</strong> {{ member.person.gender }}</p>
+      <p><strong>País:</strong> {{ member.person.country.name }} ({{ member.person.country.code }})</p>
+      <p><strong>Nacimiento:</strong> {{ member.person.birthday }}</p>
+      <p *ngIf="member.person.deathday">
+        <strong>Fallecido:</strong> {{ member.person.deathday }}
+      </p>
+      <p class="character">
+        <strong>Interpreta a:</strong> {{ member.character.name }}
+      </p>
+    </div>
+  </div>
+</div>

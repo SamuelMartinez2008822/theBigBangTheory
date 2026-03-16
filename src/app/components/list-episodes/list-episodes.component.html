@@ -1,0 +1,9 @@
+<section class="containerCards">
+  <h2 class="episodesTitle">Episodios</h2>
+  <div class="episodes">
+    <app-episode-card 
+      *ngFor="let episode of episodeList"
+      [episode]="episode">
+    </app-episode-card>
+  </div>
+</section>

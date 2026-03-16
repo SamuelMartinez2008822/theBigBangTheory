@@ -1,0 +1,21 @@
+<div class="cardEpisode">
+  <img 
+    class="imgEpisode"
+    [src]="episode.image.original" 
+    alt="episode-image">
+
+  <div class="infoEpisode">
+    <h3 class="titleEpisode">{{episode.name}}</h3>
+    
+    <div class="seasonEpisode">
+      <span class="episode">Episodio {{episode.number}}</span>
+      <span class="season">Temporada {{episode.season}}</span>
+    </div>
+
+    <div class="summaryEpisode" [innerHTML]="episode.summary"></div>
+
+    <a class="buttonUrl" [href]="episode.url">
+      Ver episodio
+    </a>
+  </div>
+</div>

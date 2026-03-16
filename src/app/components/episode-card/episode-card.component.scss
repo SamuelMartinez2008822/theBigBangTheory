@@ -1,0 +1,120 @@
+.cardEpisode {
+  width: 100%;
+  background: #161616;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(229, 9, 20, 0.35);
+  }
+}
+
+.imgEpisode {
+  width: 100%;
+  height: clamp(180px, 20vw, 240px);
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+
+  .cardEpisode:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.infoEpisode {
+  flex: 1;
+  padding: clamp(1rem, 2vw, 1.4rem) clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: #e0e0e0;
+}
+
+.titleEpisode {
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: white;
+}
+
+.seasonEpisode {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.98rem);
+  color: #bbb;
+}
+
+.episode,
+.season {
+  font-weight: 500;
+}
+
+.season {
+  background: #2a2a2a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: clamp(0.8rem, 1.3vw, 0.88rem);
+}
+
+.summaryEpisode {
+  font-size: clamp(0.85rem, 1.5vw, 0.97rem);
+  line-height: 1.5;
+  color: #ccc;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease 0.1s;
+
+  .cardEpisode:hover & {
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+
+.buttonUrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: clamp(0.7rem, 1.5vw, 0.85rem) clamp(1.2rem, 2vw, 1.6rem);
+  background: #e50914;
+  color: white;
+  font-weight: 600;
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease 0.1s, background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+
+  .cardEpisode:hover & {
+    max-height: 80px;
+    opacity: 1;
+  }
+
+  &:hover {
+    background: #f40612;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.45);
+  }
+}
+
+@media (max-width: 920px) {
+  .summaryEpisode,
+  .buttonUrl {
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+  }
+}

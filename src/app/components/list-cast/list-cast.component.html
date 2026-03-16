@@ -1,0 +1,10 @@
+<section class="containerCards">
+  <h2 class="castTitle">Elenco Principal</h2>
+
+  <div class="cast">
+    <app-cast-card 
+      *ngFor="let member of listMembers"
+      [member]="member">
+    </app-cast-card>
+  </div>
+</section>

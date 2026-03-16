@@ -1,0 +1,36 @@
+<div class="showInfoCard">
+  <div class="showHeader">
+    <h1 class="showTitle">{{ showInfo.name }}</h1>
+    
+    <div class="showMeta">
+      <span class="metaItem">{{ showInfo.language }}</span>
+      <span class="metaItem">•</span>
+      <span class="metaItem">
+        {{ showInfo.genres.join(', ') }}
+      </span>
+      <span class="metaItem">•</span>
+      <span class="metaItem statusBadge status-{{ showInfo.status.toLowerCase() }}">
+        {{ showInfo.status }}
+      </span>
+    </div>
+
+    <div class="showDates">
+      <span>Estrenada: {{ showInfo.premiered }}</span>
+      <span *ngIf="showInfo.ended"> • Terminada: {{ showInfo.ended }}</span>
+    </div>
+  </div>
+
+  <div class="showContent">
+    <div class="posterWrapper">
+      <img 
+      class="imgShowInfo poster"
+      [src]="showInfo.image.original" 
+      alt="episode-image">
+    </div>
+
+    <div class="showDetails">
+      <div class="summary" [innerHTML]="showInfo.summary">
+      </div>
+    </div>
+  </div>
+</div>
