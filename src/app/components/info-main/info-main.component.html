@@ -31,6 +31,12 @@
     <div class="showDetails">
       <div class="summary" [innerHTML]="showInfo.summary">
       </div>
+
+      <div class="buttonContainer">
+        <button class="toggleCast" (click)="toggleCast()">
+            {{ showCast ? 'Ocultar Elenco' : 'Mostrar Elenco' }}
+    </button>
+    </div>
     </div>
   </div>
 </div>

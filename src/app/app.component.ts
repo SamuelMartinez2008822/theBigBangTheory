@@ -13,7 +13,8 @@ import { ShowService } from './services/show.service';
 export class AppComponent implements OnInit, OnDestroy{
 	episodes: Episodes[] = [];
   showInfo: InfoMain;
-  showCast: Cast[] = [];
+  infoCast: Cast[] = [];
+  showCast: boolean = false;
 
 	private subscription: Subscription;
 
@@ -55,8 +56,12 @@ export class AppComponent implements OnInit, OnDestroy{
       });
 
     this.showService.getCast()
-    .subscribe(data => this.showCast = data);
+    .subscribe(data => this.infoCast = data);
   }
+
+  onToggleCast(value: boolean) {
+  this.showCast = value;
+}
 
   ngOnDestroy(): void {
 	this.subscription.unsubscribe();

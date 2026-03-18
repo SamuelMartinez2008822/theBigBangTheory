@@ -8,4 +8,5 @@ import { Cast } from '../../interfaces/cast.interface';
 })
 export class ListCastComponent {
   @Input() listMembers: Cast[];
+  @Input() showCast: boolean = false;
 }
