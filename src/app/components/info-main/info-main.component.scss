@@ -63,11 +63,7 @@
   gap: 2.5rem;
   padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 5vw, 2.5rem);
 
-.toggleCast {
-  
-}
-
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
     flex-direction: column;
     gap: 1.8rem;
   }
@@ -114,5 +110,49 @@
 
   ::ng-deep b, ::ng-deep strong {
     color: white;
+  }
+}
+
+.buttonContainer {
+  text-align: center;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.toggleCast {
+  background: #e50914;
+  color: white;
+  font-size: 1rem;          
+  font-weight: 600;
+  padding: 0.85rem 2.2rem;   
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.35);
+}
+
+.toggleCast:hover {
+  background: #f40612;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.45);
+}
+
+.toggleCast:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .toggleCast {
+    font-size: 0.98rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggleCast {
+    padding: 0.75rem 1.8rem;
+    font-size: 0.95rem;
   }
 }

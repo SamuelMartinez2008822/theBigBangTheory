@@ -1,9 +1,35 @@
 <section class="containerCards">
-  <h2 class="episodesTitle">Episodios</h2>
-  <div class="episodes">
+
+  <div class="header">
+    <h2 class="title">Episodios</h2>
+
+    <div class="seasonButtons">
+      <button 
+        class="season"
+        [class.active]="selectedSeason === 'all'"
+        (click)="filterBySeason('all')">
+        Todas
+      </button>
+
+      <button 
+        *ngFor="let season of seasons"
+        class="season"
+        [class.active]="selectedSeason === season"
+        (click)="filterBySeason(season)">
+        Temporada {{ season }}
+      </button>
+    </div>
+  </div>
+
+  <div class="episodesGrid">
     <app-episode-card 
-      *ngFor="let episode of episodeList"
+      *ngFor="let episode of filteredEpisodes"
       [episode]="episode">
     </app-episode-card>
   </div>
+
+  <p *ngIf="filteredEpisodes.length === 0" class="noResults">
+    No hay episodios en esta temporada.
+  </p>
+
 </section>
