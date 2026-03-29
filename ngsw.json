@@ -1,0 +1,56 @@
+{
+  "configVersion": 1,
+  "timestamp": 1774804668490,
+  "index": "/theBigBangTheory/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/theBigBangTheory/main-YE4ZZRX3.js",
+        "/theBigBangTheory/polyfills-FFHMD2TL.js",
+        "/theBigBangTheory/styles-PZF54GRY.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/theBigBangTheory/main-YE4ZZRX3.js": "0cfd908bb52f0aed6b829fff3abdf09ce5274b8a",
+    "/theBigBangTheory/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "/theBigBangTheory/styles-PZF54GRY.css": "e5456599451c29002a9dc229baab9b436df44517"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
